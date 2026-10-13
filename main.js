@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initBackToTop();
   initSmoothScrollSpy();
+  initScrollReveal();
 });
 
 /* ===================================================================
@@ -567,4 +568,64 @@ function showToast(message) {
   toastTimeout = setTimeout(() => {
     toast.classList.remove('show');
   }, 3500);
+}
+
+/* ===================================================================
+   SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER / AOS)
+   =================================================================== */
+function initScrollReveal() {
+  const selectors = [
+    { sel: '.section-header', cls: 'reveal-on-scroll' },
+    { sel: '.hero-badge-pill', cls: 'reveal-on-scroll' },
+    { sel: '.hero-title', cls: 'reveal-on-scroll delay-1' },
+    { sel: '.hero-subtitle', cls: 'reveal-on-scroll delay-2' },
+    { sel: '.hero-cta-group', cls: 'reveal-on-scroll delay-3' },
+    { sel: '.hero-trust-badges', cls: 'reveal-on-scroll delay-3' },
+    { sel: '.hero-visual', cls: 'reveal-on-scroll reveal-scale delay-2' },
+    { sel: '.signature-treatments-wrapper .treatment-card', cls: 'reveal-on-scroll', stagger: true },
+    { sel: '.menu-tabs-wrapper', cls: 'reveal-on-scroll' },
+    { sel: '.menu-items-grid .menu-item-card', cls: 'reveal-on-scroll', stagger: true },
+    { sel: '.promo-cards-grid .promo-card', cls: 'reveal-on-scroll', stagger: true },
+    { sel: '.about-images-wrapper', cls: 'reveal-on-scroll reveal-left' },
+    { sel: '.about-content', cls: 'reveal-on-scroll reveal-right' },
+    { sel: '.about-pillars-grid .pillar-item', cls: 'reveal-on-scroll', stagger: true },
+    { sel: '.testimonials-grid .testimonial-card', cls: 'reveal-on-scroll', stagger: true },
+    { sel: '.faq-accordion .faq-item', cls: 'reveal-on-scroll', stagger: true },
+    { sel: '.contact-details', cls: 'reveal-on-scroll reveal-left' },
+    { sel: '.contact-map-card', cls: 'reveal-on-scroll reveal-right' }
+  ];
+
+  selectors.forEach(item => {
+    document.querySelectorAll(item.sel).forEach((el, idx) => {
+      item.cls.split(' ').forEach(c => el.classList.add(c));
+      if (item.stagger) {
+        const delayNum = (idx % 3) + 1;
+        el.classList.add(`delay-${delayNum}`);
+      }
+    });
+  });
+
+  const allRevealElements = document.querySelectorAll('.reveal-on-scroll');
+
+  if (!('IntersectionObserver' in window)) {
+    allRevealElements.forEach(el => el.classList.add('is-revealed'));
+    return;
+  }
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  allRevealElements.forEach(el => observer.observe(el));
 }
