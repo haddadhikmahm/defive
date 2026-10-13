@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C6B37"/>
+      <stop offset="50%" stop-color="#C29B5E"/>
+      <stop offset="100%" stop-color="#845524"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Botanical leaves sprouting above the "e" -->
+  <g transform="translate(68, 8) scale(0.95)" fill="url(#goldGrad)">
+    <!-- Center Leaf -->
+    <path d="M12 18 C12 10 18 2 24 0 C24 8 20 16 12 18 Z"/>
+    <!-- Left Leaf -->
+    <path d="M10 20 C6 14 0 10 -6 10 C-4 18 2 22 10 20 Z"/>
+    <!-- Right Leaf -->
+    <path d="M14 20 C20 16 28 16 34 18 C30 24 22 24 14 20 Z"/>
+    <!-- Tiny branch stem -->
+    <path d="M12 24 C12 21 11 19 12 18" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Logo Text rendered as stylized typography -->
+  <!-- "De" Calligraphic -->
+  <text x="8" y="52" font-family="'Playfair Display', 'Cormorant Garamond', serif" font-style="italic" font-weight="700" font-size="52" fill="url(#goldGrad)" letter-spacing="1">De</text>
+  
+  <!-- "five" Clean Luxury Serif -->
+  <text x="86" y="52" font-family="'Playfair Display', 'Cinzel', serif" font-weight="600" font-size="44" fill="url(#goldGrad)" letter-spacing="0.5">five</text>
+</svg>

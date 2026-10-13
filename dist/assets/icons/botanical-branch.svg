@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 350" fill="none">
+  <!-- Botanical stem -->
+  <path d="M10 340C30 280 60 210 95 140C120 90 145 45 165 10" stroke="#C8B29E" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Leaf 1 bottom left -->
+  <path d="M25 310C15 285 20 260 45 255C55 275 48 295 25 310Z" fill="#E6D7C8" stroke="#B89F8B" stroke-width="2"/>
+  <path d="M25 310C35 285 45 270 45 255" stroke="#B89F8B" stroke-width="1.5"/>
+
+  <!-- Leaf 2 right -->
+  <path d="M42 275C65 265 85 275 92 250C80 238 60 245 42 275Z" fill="#EBDDCF" stroke="#B89F8B" stroke-width="2"/>
+  <path d="M42 275C65 260 80 252 92 250" stroke="#B89F8B" stroke-width="1.5"/>
+
+  <!-- Leaf 3 left -->
+  <path d="M58 220C40 200 45 175 70 170C80 190 75 210 58 220Z" fill="#E6D7C8" stroke="#B89F8B" stroke-width="2"/>
+  <path d="M58 220C63 200 68 185 70 170" stroke="#B89F8B" stroke-width="1.5"/>
+
+  <!-- Leaf 4 right -->
+  <path d="M78 180C105 170 120 182 130 160C115 148 95 155 78 180Z" fill="#EBDDCF" stroke="#B89F8B" stroke-width="2"/>
+  <path d="M78 180C100 168 115 162 130 160" stroke="#B89F8B" stroke-width="1.5"/>
+
+  <!-- Leaf 5 left -->
+  <path d="M98 135C80 115 88 90 112 85C120 105 115 125 98 135Z" fill="#E6D7C8" stroke="#B89F8B" stroke-width="2"/>
+  <path d="M98 135C104 118 108 102 112 85" stroke="#B89F8B" stroke-width="1.5"/>
+
+  <!-- Leaf 6 right -->
+  <path d="M120 95C145 88 158 98 168 78C152 68 135 75 120 95Z" fill="#EBDDCF" stroke="#B89F8B" stroke-width="2"/>
+  <path d="M120 95C140 85 155 80 168 78" stroke="#B89F8B" stroke-width="1.5"/>
+
+  <!-- Leaf 7 top tip -->
+  <path d="M142 55C150 35 158 20 172 8C175 25 165 42 142 55Z" fill="#E6D7C8" stroke="#B89F8B" stroke-width="2"/>
+  <path d="M142 55C155 35 165 20 172 8" stroke="#B89F8B" stroke-width="1.5"/>
+</svg>
